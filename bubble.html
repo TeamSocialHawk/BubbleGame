@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./game.js" type="application/javascript"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap');
+
+    #canvas{    
+        border: 1px solid black;
+        border-radius: 8px;
+        background: url("./background.png");
+    }
+
+    #options{
+        width: 300px;
+        display: flex;
+        flex-direction: row;        
+        text-align: justify;
+        text-align-last: center;
+        justify-content: space-between;
+        font-family: 'Balsamiq Sans', cursive;        
+    }
+
+    #options button{
+        width: 100px;
+        margin: 5px;
+        border-radius: 8px;
+        border: 1px gray solid;
+        font-family: 'Balsamiq Sans', cursive;
+    }    
+
+    #options img{
+        height: 20px;
+        width: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+</style>
+<body>
+    <div id="content">
+        <canvas id="canvas"></canvas>
+        <div id="options">
+            <p>Score: <p>0</p></p>
+            <img src="./heart.png">
+            <p id="lives">0</p>
+            <button id="pause">Pause</button>
+        </div>        
+    </div>        
+    <script>
+        const game = new Game("canvas");
+    </script>
+</body>
+</html>
